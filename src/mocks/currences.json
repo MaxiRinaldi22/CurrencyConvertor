@@ -1,0 +1,134 @@
+{
+  "Currencies": [
+    {
+      "title": "Dollar",
+      "currency": "USD",
+      "img": "https://flagcdn.com/w20/us.png"
+    },
+    {
+      "title": "Euro",
+      "currency": "EUR",
+      "img": "https://flagcdn.com/w20/eu.png"
+    },
+    {
+      "title": "British Pound",
+      "currency": "GBP",
+      "img": "https://flagcdn.com/w20/gb.png"
+    },
+    {
+      "title": "Japanese Yen",
+      "currency": "JPY",
+      "img": "https://flagcdn.com/w20/jp.png"
+    },
+    {
+      "title": "Canadian Dollar",
+      "currency": "CAD",
+      "img": "https://flagcdn.com/w20/ca.png"
+    },
+    {
+      "title": "Australian Dollar",
+      "currency": "AUD",
+      "img": "https://flagcdn.com/w20/au.png"
+    },
+    {
+      "title": "Swiss Franc",
+      "currency": "CHF",
+      "img": "https://flagcdn.com/w20/ch.png"
+    },
+    {
+      "title": "Chinese Yuan",
+      "currency": "CNY",
+      "img": "https://flagcdn.com/w20/cn.png"
+    },
+    {
+      "title": "Indian Rupee",
+      "currency": "INR",
+      "img": "https://flagcdn.com/w20/in.png"
+    },
+    {
+      "title": "Russian Ruble",
+      "currency": "RUB",
+      "img": "https://flagcdn.com/w20/ru.png"
+    },
+    {
+      "title": "Brazilian Real",
+      "currency": "BRL",
+      "img": "https://flagcdn.com/w20/br.png"
+    },
+    {
+      "title": "South African Rand",
+      "currency": "ZAR",
+      "img": "https://flagcdn.com/w20/za.png"
+    },
+    {
+      "title": "Mexican Peso",
+      "currency": "MXN",
+      "img": "https://flagcdn.com/w20/mx.png"
+    },
+    {
+      "title": "South Korean Won",
+      "currency": "KRW",
+      "img": "https://flagcdn.com/w20/kr.png"
+    },
+    {
+      "title": "Turkish Lira",
+      "currency": "TRY",
+      "img": "https://flagcdn.com/w20/tr.png"
+    },
+    {
+      "title": "Saudi Riyal",
+      "currency": "SAR",
+      "img": "https://flagcdn.com/w20/sa.png"
+    },
+    {
+      "title": "Swedish Krona",
+      "currency": "SEK",
+      "img": "https://flagcdn.com/w20/se.png"
+    },
+    {
+      "title": "Norwegian Krone",
+      "currency": "NOK",
+      "img": "https://flagcdn.com/w20/no.png"
+    },
+    {
+      "title": "Singapore Dollar",
+      "currency": "SGD",
+      "img": "https://flagcdn.com/w20/sg.png"
+    },
+    {
+      "title": "New Zealand Dollar",
+      "currency": "NZD",
+      "img": "https://flagcdn.com/w20/nz.png"
+    },
+    {
+      "title": "Argentine Peso",
+      "currency": "ARS",
+      "img": "https://flagcdn.com/w20/ar.png"
+    },
+    {
+      "title": "Indonesian Rupiah",
+      "currency": "IDR",
+      "img": "https://flagcdn.com/w20/id.png"
+    },
+    {
+      "title": "Malaysian Ringgit",
+      "currency": "MYR",
+      "img": "https://flagcdn.com/w20/my.png"
+    },
+    {
+      "title": "Thai Baht",
+      "currency": "THB",
+      "img": "https://flagcdn.com/w20/th.png"
+    },
+    {
+      "title": "UAE Dirham",
+      "currency": "AED",
+      "img": "https://flagcdn.com/w20/ae.png"
+    },
+    {
+      "title": "Uruguayan Peso",
+      "currency": "UYU",
+      "img": "https://flagcdn.com/w20/uy.png"
+    }
+  ]
+}
