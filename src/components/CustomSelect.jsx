@@ -1,6 +1,5 @@
 import { Close, DownArrow } from "./Icons";
 import { useState } from "react";
-import "./Select.css";
 
 export function CustomSelect({ currences, selectedCountry, onSelectCountry }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,25 +14,31 @@ export function CustomSelect({ currences, selectedCountry, onSelectCountry }) {
   };
 
   return (
-    <div className="custom-select">
-      <div className="select-box" onClick={toggleOptions}>
-        <div>
+    <div className="relative flex h-12 items-center justify-center rounded-md border-2 border-gray-300 p-1  text-lg font-medium shadow-custom lg:mb-5">
+      <div
+        className="flex w-full items-center justify-between"
+        onClick={toggleOptions}
+      >
+        <div className="flex h-4 items-center gap-1 px-2">
           <img
             id="selected-flag"
             src={selectedCountry.img}
             alt={`Bandera de ${selectedCountry.title}`}
           />
-          <span className="selected-currence">
+          <span className="font-normal">
             {selectedCountry.currency} -
-            <span className="descripiton"> {selectedCountry.title}</span>
+            <span className="font-[300] text-gray-700">
+              {" "}
+              {selectedCountry.title}
+            </span>
           </span>
         </div>
 
         <DownArrow />
       </div>
       {isOpen && (
-        <div className="options-container">
-          <div className="container-close">
+        <div className="fixed left-0 top-0 z-[999] flex h-full w-full cursor-pointer flex-col gap-1.5 bg-white p-2.5 font-normal">
+          <div className="flex h-7 items-center justify-end">
             <button onClick={() => setIsOpen(false)}>
               <Close />
             </button>
@@ -41,13 +46,19 @@ export function CustomSelect({ currences, selectedCountry, onSelectCountry }) {
           {currences.map((country, index) => (
             <div
               key={index}
-              className="option"
+              className="flex cursor-pointer items-center"
               onClick={() => selectOption(country)}
             >
-              <img src={country.img} alt={`Bandera de ${country.title}`} />
-              <span>
-                {country.currency} - {" "}
-                <span className="descripiton">{country.title}</span>
+              <img
+                className="mx-2.5 max-h-6 min-h-5 w-6 rounded-sm border border-gray-400"
+                src={country.img}
+                alt={`Bandera de ${country.title}`}
+              />
+              <span className="font-normal">
+                {country.currency} -{" "}
+                <span className="font-[300] text-gray-700">
+                  {country.title}
+                </span>
               </span>
             </div>
           ))}

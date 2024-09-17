@@ -1,12 +1,10 @@
-import "./App.css";
-import { Conversor } from "./components/Conversor";
+import Conversor from "./components/Conversor";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <main className="container-main">
-      <div className="back-color">
-        <h1>Conversor de divisas</h1>
-      </div>
+    <main className="flex flex-col items-center justify-center bg-white">
+      <Header />
       <Conversor />
     </main>
   );
