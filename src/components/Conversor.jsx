@@ -30,7 +30,7 @@ function Conversor() {
       firstCurrency={firstCurrency}
       secondCurrency={secondCurrency}
     >
-      <section className="flex flex-col items-center justify-center lg:flex-row w-full h-[80vh] bg-gradient-to-b from-[#00214A] via-[#00214A]/20 to-white ">
+      <section className="flex flex-col items-center justify-center lg:flex-row w-full h-[90vh] lg:h-[70vh] bg-gradient-to-b from-[#00214A] via-[#00214A]/20 to-white ">
         <section className="flex h-fit w-96 flex-col rounded-md bg-white p-5 shadow-custom-shadow lg:h-fit lg:w-[1000px] lg:justify-between">
           <div className="mb-2.5 md:h-80 lg:flex lg:max-h-[90px] lg:items-center lg:justify-between lg:gap-2">
             <div className="flex flex-col">
