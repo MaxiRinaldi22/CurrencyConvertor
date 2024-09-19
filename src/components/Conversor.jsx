@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Currencies } from "../mocks/currences.json";
 import { TransferMobile, TransferPc } from "./Icons";
 import { CustomSelect } from "./CustomSelect";
@@ -15,8 +15,6 @@ function Conversor() {
   // Resultados
   const [mianResult, setMainResult] = useState(0);
   const [showResult, setShowResult] = useState(false);
-  const [click, setClick] = useState(0);
-  
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -27,16 +25,14 @@ function Conversor() {
     setSecondCurrency(firstCurrency);
   };
 
-
   return (
     <CurrencesProvider
       firstCurrency={firstCurrency}
       secondCurrency={secondCurrency}
     >
-      <section className="flex flex-col items-center gap-5 lg:mt-10 lg:flex-row">
-        <section className="shadow-custom-shadow flex h-fit w-96 flex-col rounded-md bg-white p-5 lg:h-[22rem] lg:w-[1000px] lg:justify-between">
+      <section className="flex flex-col items-center justify-center lg:flex-row w-full h-[70vh] bg-gradient-to-b from-[#00214A] via-[#00214A]/20 to-white">
+        <section className="flex h-fit w-96 flex-col rounded-md bg-white p-5 shadow-custom-shadow lg:h-fit lg:w-[1000px] lg:justify-between">
           <div className="mb-2.5 md:h-80 lg:flex lg:max-h-[90px] lg:items-center lg:justify-between lg:gap-2">
-
             <div className="flex flex-col">
               <label htmlFor="imputValue" className="mb-0.5 font-bold lg:mb-0">
                 Amount
@@ -48,14 +44,14 @@ function Conversor() {
                     : { marginBottom: "0px" }
                 }
                 id="imputValue"
-                className="min-h-12 rounded-md border-2 border-gray-300 px-2 text-lg shadow-custom focus:border-[#0a146e] focus:outline-none focus:ring-1 focus:ring-[#0a146e] lg:w-60"
+                className="shadow-custom min-h-12 rounded-md border-2 border-gray-300 px-2 text-lg focus:border-[#00D37E] focus:outline-none focus:ring-1 focus:ring-[#00D37E] sm:text-[16px] lg:text-lg lg:w-60"
                 type="number"
                 value={inputValue}
                 onChange={handleInputChange}
               />
 
               {inputValue <= 0 && (
-                <p className="text-sm text-red-600">
+                <p className="text-sm text-[#00D37E]">
                   Please enter an amount greater than 0
                 </p>
               )}
@@ -76,7 +72,7 @@ function Conversor() {
 
               <div className="flex items-center lg:justify-center">
                 <button
-                  className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-solid border-gray-300 bg-transparent shadow-custom"
+                  className="shadow-custom flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-2 border-solid border-gray-300 bg-transparent"
                   onClick={handleSwitchClick}
                 >
                   <div className="lg:hidden">
@@ -102,11 +98,12 @@ function Conversor() {
           </div>
 
           <Result
-            resultProps={{
+            conversorProps={{
               inputValue,
               firstCurrency,
               secondCurrency,
-              setClick,
+            }}
+            resultsProps={{
               showResult,
               setShowResult,
               mianResult,
@@ -114,17 +111,14 @@ function Conversor() {
             }}
           />
         </section>
-
-      
       </section>
-   
-        <section className="mt-24 flex w-96 flex-col justify-center gap-4 lg:w-[1042px] lg:flex-row">
-          <DefaultConversions
-            firstCurrency={firstCurrency}
-            secondCurrency={secondCurrency}
-          />
-        </section>
-   
+
+      <section className=" flex w-96 flex-col justify-center gap-4 lg:w-[1042px] lg:flex-row">
+        <DefaultConversions
+          firstCurrency={firstCurrency}
+          secondCurrency={secondCurrency}
+        />
+      </section>
     </CurrencesProvider>
   );
 }

@@ -14,7 +14,7 @@ export function CustomSelect({ currences, selectedCountry, onSelectCountry }) {
   };
 
   return (
-    <div className="relative flex h-12 items-center justify-center rounded-md border-2 border-gray-300 p-1  text-lg font-medium shadow-custom lg:mb-5">
+    <div className="shadow-custom relative flex h-12 items-center justify-center rounded-md border-2 border-gray-300 p-1 text-lg font-medium lg:mb-5">
       <div
         className="flex w-full items-center justify-between"
         onClick={toggleOptions}
@@ -37,7 +37,7 @@ export function CustomSelect({ currences, selectedCountry, onSelectCountry }) {
         <DownArrow />
       </div>
       {isOpen && (
-        <div className="fixed left-0 top-0 z-[999] flex h-full w-full cursor-pointer flex-col gap-1.5 bg-white p-2.5 font-normal">
+        <div className="fixed left-0 top-0 z-[999] flex h-full w-full cursor-pointer flex-col gap-1.5 bg-white p-2.5 font-normal md:absolute md:left-0 md:top-full md:h-auto md:w-[320px] md:max-h-48 md:overflow-y-auto md:p-0">
           <div className="flex h-7 items-center justify-end">
             <button onClick={() => setIsOpen(false)}>
               <Close />
